@@ -1,0 +1,115 @@
+10
+
+dir
+42
+https://darhic@labs.villagethegame.com/villagedash/trunk/.metadata/.plugins
+https://darhic@labs.villagethegame.com/villagedash
+
+
+
+2012-09-22T23:45:15.234685Z
+42
+darhic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+03104305-5c64-430c-910b-4504875d8791
+
+org.eclipse.team.cvs.core
+dir
+
+org.eclipse.mylyn.bugzilla.core
+dir
+
+org.eclipse.mylyn.tasks.ui
+dir
+
+org.eclipse.jdt.core
+dir
+
+com.adobe.flexbuilder.standalone
+dir
+
+org.eclipse.m2e.core
+dir
+
+org.eclipse.core.runtime
+dir
+
+com.adobe.flexbuilder.codemodel
+dir
+
+org.eclipse.ui.ide
+dir
+
+org.eclipse.debug.core
+dir
+
+com.adobe.flexbuilder.editorcore
+dir
+
+org.eclipse.ltk.core.refactoring
+dir
+
+com.adobe.flexbuilder.mxml.editor
+dir
+
+com.adobe.flexide.as.core
+dir
+
+com.adobe.flexbuilder.project
+dir
+
+org.eclipse.jdt.launching
+dir
+
+org.eclipse.ui.workbench.texteditor
+dir
+
+org.eclipse.m2e.logback.configuration
+dir
+
+com.adobe.flexide.editorcore
+dir
+
+com.adobe.flash.profiler
+dir
+
+com.adobe.flexbuilder.exportimport
+dir
+
+org.eclipse.jdt.ui
+dir
+
+org.eclipse.ui.workbench
+dir
+
+com.adobe.flexide.mxml.core
+dir
+
+org.eclipse.core.resources
+dir
+
+org.eclipse.debug.ui
+dir
+
+com.adobe.flexbuilder.project.ui
+dir
+
+org.eclipse.search
+dir
+
+org.eclipse.wb.discovery.core
+dir
+

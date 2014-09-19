@@ -1,0 +1,472 @@
+﻿package 
+{
+	
+	import com.google.analytics.AnalyticsTracker;
+	import com.google.analytics.GATracker;
+	import com.utilities.EmbedSecure;
+	import com.utilities.LinkButtons;
+	
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+	import flash.display.DisplayObject;
+	import flash.display.MovieClip;
+	import flash.display.Sprite;
+	import flash.events.Event;
+	import flash.events.MouseEvent;
+	import flash.events.TimerEvent;
+	import flash.media.Sound;
+	import flash.media.SoundMixer;
+	import flash.media.SoundTransform;
+	import flash.sensors.Accelerometer;
+	import flash.utils.Dictionary;
+	import flash.utils.Timer;
+	import flash.utils.getDefinitionByName;
+	
+	import org.casalib.util.StringUtil;
+	import org.osmf.events.TimeEvent;
+	
+	
+	
+	[SWF(height="550", width="750", backgroundColor="#000000", frameRate="30")] 
+	
+	public class Main extends Sprite 
+	{
+		
+		public static const  settings:AllSettings = AllSettings.getInstance();
+		
+		public static const  GOATINT:Number   = 1;
+		public static const  PUMPINT:Number   = 3;
+		public static const  POTATOINT:Number = 2;
+		public static const  DRIPINT:Number   = 4;
+		public static var inventory:Array = new Array();
+		public static var currentSetting:Level;
+		private var _gameArt:EmbedSecure;
+		private var goalscreen:MovieClip;
+		private var innovationscreen:MovieClip;
+		public var avatarChoiceType:String;
+		private var _background:Sprite;
+		public var levelsettings:Level;
+		private var _frame:Sprite;
+		private var _windowSystem:WindowsSystem;
+		public static var _isoGame:IsoViewer;
+		public static var _hud:Hud;
+		
+		private  var currentLevel:int = 1;   // should get of this and just use currentSetting but oh well.
+		public static var debug:Boolean = true;
+		private var _gameActive:Boolean = false;
+		private var _gamePlayInit:Boolean = false;
+		private var _scoreVal:Number = 0;
+		private var _xpVal:Number = 0;
+		private var _scoreToWin:Number=10;   /* 500 */
+		
+		private var _muteButton:Sprite = new Sprite();
+		private var _restartButton:Sprite = new Sprite();
+		
+		private var autoStart:Boolean = false;
+		
+		public static var mainMixerTransform:SoundTransform = new SoundTransform();
+		public static var soundSet:Dictionary=new Dictionary();
+		
+		public static const EVENT_MUTE:String = "event_mute";
+		
+		private var _preloader:Preloader;
+		
+		
+		private var introSheet:DisplayObject;
+		
+		public function Main():void 
+		{
+			_preloader = new Preloader();
+			currentSetting = AllSettings.levels[currentLevel];
+			
+			
+			if (stage)
+			{
+				init();
+			} else {
+				addEventListener(Event.ADDED_TO_STAGE, init);
+			}		
+			
+			
+		}
+		
+	
+		public static function initInventory():void{
+			trace("initializing inventory with Currentsetting.inventory:" + currentSetting.inventory);
+			//get string from inventory and turn into array  of strings then do for loop
+			var items:Array =  currentSetting.inventory.split(",");
+			inventory = new Array();
+			for(var item:String in items){
+				items[item] = StringUtil.trim(items[item]);
+				switch (items[item]) {
+					case "Water Pump":
+						inventory.push(Main.PUMPINT);
+						break;
+					case "Goat":
+						inventory.push(Main.GOATINT);
+						break;
+					case "Driptech":
+						inventory.push(Main.DRIPINT);
+						break;
+					case "Sweet Potato":
+						inventory.push(Main.POTATOINT);
+						break;
+				}
+			}
+			trace("Inventory initizlized: Main.inventory.length:" + Main.inventory.length);
+		}
+		
+		private function init(e:Event = null):void 
+		{
+			_gamePlayInit=false;
+			//LevelManager.instance.loadNextLevel();
+			var tracker:GATracker = new GATracker( this, "UA-5656121-5", "AS3", false );
+
+			addChild(_preloader);
+			removeEventListener(Event.ADDED_TO_STAGE, init);
+			artReady();
+			
+		}
+		
+		private function artReady(event:Event=null):void {
+			//setup the game sounds
+			soundSet["button_down"] = new button_down();
+			soundSet["button_over"] = new button_over();
+			soundSet["complete"] = new complete();
+			soundSet["ohoh"] = new ohoh();
+			soundSet["select"] = new select();
+			soundSet["select2"] = new select_2();
+			soundSet["select3"] = new select_3();
+			soundSet["tribal_1"] = new tribal_1();
+			soundSet["tribal_2"] = new tribal_2();
+			soundSet["tribal_beat"] = new tribal_beat();
+			soundSet["order_delivered"] = new order_delivered();
+			soundSet["take_order"] = new takeOrder2();
+			soundSet["plot_select"] = new plotselect();
+			soundSet["ambient"] = new ambient();
+			soundSet["selectItem"] = new selectItem();
+			soundSet["collectItem"] = new collectItem();
+			
+			//
+			//setup resources here
+			_background = new background();
+			addChild(_background);
+			
+			//***isometric view and overlay messaging floater***
+			_isoGame = new IsoViewer(this);
+			
+			// display score event 
+			_isoGame.addEventListener(AllSettings.EVENT_SCORE, sendScore);
+			
+			_isoGame.addEventListener(AllSettings.EVENT_OVER, gameOver);
+			
+			isoEnabled(false);
+			
+			addChild(_isoGame);
+			
+			//***hud***
+			_hud = new Hud();
+			_hud.addEventListener(Hud.EVENT_TIMEOUT, gameAction);
+			_hud.addEventListener(Hud.EVENT_WIN, win);
+			
+			
+			
+			_hud.addEventListener(Hud.EVENT_MUTE, muter);
+			addChild(_hud);
+			//end
+			
+			//***windows***	
+			_windowSystem = new WindowsSystem();		
+			_windowSystem.addEventListener(WindowsSystem.EVENT_WINDOW, gameAction);
+			_windowSystem.addEventListener(WindowsSystem.EVENT_WINDOWCLOSED, windowClosed);
+			_windowSystem.addEventListener(WindowsSystem.EVENT_CHANGE_AVATAR,changeAvatar);
+			
+			addChild(_windowSystem);
+			//end
+			
+			//***frame***
+			_frame = new frame();
+			
+			_frame.mouseEnabled=false
+			addChild(_frame);
+			//end
+			
+			_windowSystem.show("instruct");
+			
+			
+			
+			_muteButton.addChild(new Bitmap(new mute(1, 1)));
+			_muteButton.x = Preloader.stageObj.stageWidth - 55;
+			_muteButton.y = Preloader.stageObj.stageHeight - 20;
+			_muteButton.buttonMode = true;
+			_muteButton.useHandCursor = true;
+			_muteButton.addEventListener(MouseEvent.MOUSE_DOWN, function():void { dispatchEvent(new Event(EVENT_MUTE, true))});
+			_muteButton.addEventListener(MouseEvent.MOUSE_OVER, overMuteButton);
+			addEventListener(Main.EVENT_MUTE, muter);
+			addChild(_muteButton);
+			
+			
+			
+		}
+		
+		private function overMuteButton(event:Event):void
+		{
+			trace("overMuteButton...");
+		}
+		
+		//function to mute game sound
+		private function muter(event:Event):void 
+		{
+			if(Number(mainMixerTransform.volume)>0)
+			{
+				var snd:SoundTransform = new SoundTransform();
+				snd.volume = 0;
+				_muteButton.alpha=.5
+				mainMixerTransform = snd; 
+			} else {
+				if(Number(mainMixerTransform.volume)==0)
+				{
+					snd = new SoundTransform();
+					snd.volume = 1;
+					_muteButton.alpha=1
+					mainMixerTransform = snd; 
+				} 
+			}	
+			
+			SoundMixer.soundTransform = snd;
+		}
+		
+		//update score function associated with IsoViewer.EVENT_SCORE
+		private function sendScore(event:Event):void {
+			trace("Main.sendScore: " + event);
+			_scoreVal=event.target.scoreVal
+			_hud.floatScore(event.target as Sprite,_scoreVal,event.target.scorePoz)
+		}
+		
+		
+		
+		
+		private function isoEnabled(bol:Boolean):void 
+		{
+			_isoGame.mouseEnabled=bol;
+			_isoGame.mouseChildren=bol;
+		}
+		
+		private function gameAction(event:Event):void 
+		{
+			trace("gameAction: "+event.target.dispatchType);
+			trace("currentLevel: "+currentSetting.current_level);
+			switch(event.target.dispatchType) {
+				case "play":
+					trace("play");
+					_gameActive = true;
+					_windowSystem.disable();
+					_windowSystem.fade();
+					isoEnabled(true);
+					break;
+				
+				case "replay":
+					currentSetting.current_level = 1;
+					
+					_gameActive = false;
+					//LevelManager.instance.loadLevel(currentSetting.currentLevel);
+					currentSetting  = AllSettings.levels[currentLevel];
+					
+					//how do I make the avatar picker do it's thing?
+					_windowSystem.show("avatarpicker");
+					init();
+					break;
+				
+				case "retry level":
+					currentSetting = AllSettings.levels[currentLevel];
+					
+					_gameActive = false;	
+					init();
+					_windowSystem.disable();
+					_windowSystem.hideAll();
+					autoStart = true;
+					killFarmerTimers(_isoGame._characterAr);
+					isoEnabled(false);
+					startGame();
+					isoEnabled(true);
+					break;
+				
+				case "nextLevel":
+					
+					currentSetting.current_level++;
+					currentLevel++;
+					currentSetting = AllSettings.levels[currentLevel];
+					
+					_gameActive = false;	
+					//artReady();
+					init();
+					_windowSystem.disable();
+					_windowSystem.hideAll();
+					autoStart = true;
+					killFarmerTimers(_isoGame._characterAr);
+					isoEnabled(false);
+					startGame();
+					initInventory();
+
+					isoEnabled(true);
+					break;
+				
+				
+				case "clock":
+					isoEnabled(false);
+					_windowSystem.show("gameEnd");
+					break;
+			}
+		}
+		
+		private function killFarmerTimers(farmers:Array):void{
+			// this is actually the character array so skip over farmer[0] since that's the player
+			// i know dumb
+			for(var i:uint = 1; i< farmers.length; i++){
+				farmers[i].killDestinationTimer();
+				farmers[i].killAngerTimer();
+				
+			}	
+		}
+		
+		private function windowClosed(event:Event):void {
+			switch(event.target.dispatchType) {
+				case "play":
+					//trace("enable iso")
+					startGame();
+					break;
+			}
+		}
+		
+		private function startGame():void 
+		{
+			
+			//levelsettings.loadLevel();
+			
+			_windowSystem.final_win_message = currentSetting.final_win_message;
+			showInnovationScreen();
+			
+			isoEnabled(false);
+		}
+		
+		
+		private function showInnovationScreen():void{
+			trace("showInnovation: " +currentSetting.innovation_img);
+			innovationscreen = new InnovationScreen();
+			innovationscreen.addEventListener(MouseEvent.CLICK, showGoalScreen);
+			innovationscreen.mouseChildren = false;
+			innovationscreen.InnovationDesc.text = currentSetting.innovation_desc;
+			innovationscreen.InnovationName.text = currentSetting.innovation_name;
+			var imgInn:MovieClip;
+			
+			switch(currentSetting.innovation_img){
+				case "WaterPump":
+					imgInn = new WaterPump();
+					imgInn.x = innovationscreen.InnovationImg.x;
+					imgInn.y = innovationscreen.InnovationImg.y;
+					innovationscreen.addChild(imgInn);
+					innovationscreen.InnovationImg.visible = false;
+					break;
+				case "DripTech":
+					imgInn = new Driptech();
+					imgInn.x = innovationscreen.InnovationImg.x;
+					imgInn.y = innovationscreen.InnovationImg.y;
+					innovationscreen.addChild(imgInn);
+					innovationscreen.InnovationImg.visible = false;
+					break;
+				case "Goat":
+					imgInn = new Goat();
+					imgInn.x = innovationscreen.InnovationImg.x;
+					imgInn.y = innovationscreen.InnovationImg.y;
+					innovationscreen.addChild(imgInn);
+					innovationscreen.InnovationImg.visible = false;
+					break;
+				case "Sweet Potato":
+					imgInn = new SweetPotato();
+					imgInn.x = innovationscreen.InnovationImg.x;
+					imgInn.y = innovationscreen.InnovationImg.y;
+					innovationscreen.addChild(imgInn);
+					innovationscreen.InnovationImg.visible = false;
+					break;
+			}
+			addChild(innovationscreen);
+			innovationscreen.x = Preloader.stageObj.stageWidth / 2 - innovationscreen.width/2;
+			innovationscreen.y = Preloader.stageObj.stageHeight/ 2 - innovationscreen.height/2;
+			
+		}
+		
+		private function showGoalScreen(event:Event):void{
+			goalscreen = new GoalScreen();
+			removeChild(innovationscreen);
+			goalscreen.addEventListener(MouseEvent.CLICK, start);
+			goalscreen.x = Preloader.stageObj.stageWidth / 2 - goalscreen.width/2;
+			goalscreen.y = Preloader.stageObj.stageHeight/ 2 - goalscreen.height/2;
+			goalscreen.goalText.text = currentSetting.win_condition;
+			addChild(goalscreen);
+		}
+		
+		private function showWinScreen(event:Event):void{
+			// we are going to reuse the goal screen to display the final win of the game. 
+			var winscreen:MovieClip = new GoalScreen();
+			winscreen.addEventListener(MouseEvent.CLICK, start);
+			winscreen.x = Preloader.stageObj.stageWidth / 2 - goalscreen.width/2;
+			winscreen.y = Preloader.stageObj.stageHeight/ 2 - goalscreen.height/2;
+			winscreen.preface.text = "Congratulations! You won the game!"
+			winscreen.goalText.text = currentSetting.win_condition;
+			//you completed the game and discovered some powerful solutions to poverty. Visit VillagetheGame.com for more info";
+			
+			addChild(goalscreen);
+		}
+		
+		
+		
+		
+		private function start(event:Event):void
+		{
+			removeEventListener(MouseEvent.CLICK, start);
+			removeChild(goalscreen);
+			if (!_gamePlayInit) {
+				
+				_isoGame.setupCharacters()
+				_gamePlayInit=true
+			}
+			_hud.resetAll()
+			_hud.scoreToWin = currentSetting.win_condition;
+			_isoGame.resetGame()
+			_hud.level = currentSetting.current_level;
+			//dispatchEvent(new flash.events.Event(Hud.EVENT_MUTE));  //tired of birds for now
+			isoEnabled(true);
+			initInventory();
+		}
+		
+		private function changeAvatar(event:Event):void {
+			trace("changeAvatar: "+event.target.avatarType)
+			_isoGame.AvatarSkin=event.target.avatarType;
+			avatarChoiceType = event.target.avatarType;
+		}
+		
+		private function win(event:Event):void {
+			_isoGame.won = true;
+			isoEnabled(false)
+			killFarmerTimers(_isoGame._characterAr);
+			_hud.stopClock();
+			_windowSystem.show("levelWin");
+		}
+		
+		private function endLevel(event:Event):void{
+			_isoGame.won = true;
+			isoEnabled(false)
+			_hud.stopClock();
+			_windowSystem.show("nextLevel");
+			
+		}
+		
+		private function gameOver(event:Event):void
+		{
+			isoEnabled(false);
+			_hud.stopClock();
+			_windowSystem.show("gameEnd");
+		}
+	}
+	
+}

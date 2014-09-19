@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/core
+END
+ClassFactory.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/core/ClassFactory.as
+END
+IsoContainer.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/core/IsoContainer.as
+END
+IFactory.as
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/core/IFactory.as
+END
+IIsoDisplayObject.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/core/IIsoDisplayObject.as
+END
+as3isolib_internal.as
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/core/as3isolib_internal.as
+END
+IIsoContainer.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/core/IIsoContainer.as
+END
+IsoDisplayObject.as
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/core/IsoDisplayObject.as
+END
+IInvalidation.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/core/IInvalidation.as
+END

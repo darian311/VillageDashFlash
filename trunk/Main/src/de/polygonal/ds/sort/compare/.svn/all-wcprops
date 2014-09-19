@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/villagedash/!svn/ver/42/trunk/Main/src/de/polygonal/ds/sort/compare
+END
+compareStringCaseSensitiveDesc.as
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/villagedash/!svn/ver/42/trunk/Main/src/de/polygonal/ds/sort/compare/compareStringCaseSensitiveDesc.as
+END
+compareStringCaseSensitive.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/villagedash/!svn/ver/42/trunk/Main/src/de/polygonal/ds/sort/compare/compareStringCaseSensitive.as
+END
+compareStringCaseInSensitiveDesc.as
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/villagedash/!svn/ver/42/trunk/Main/src/de/polygonal/ds/sort/compare/compareStringCaseInSensitiveDesc.as
+END
+compareStringCaseInSensitive.as
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/villagedash/!svn/ver/42/trunk/Main/src/de/polygonal/ds/sort/compare/compareStringCaseInSensitive.as
+END

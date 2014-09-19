@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/villagedash/!svn/ver/42/trunk/Main/src/org/casalib/time
+END
+Inactivity.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/villagedash/!svn/ver/42/trunk/Main/src/org/casalib/time/Inactivity.as
+END
+Interval.as
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/villagedash/!svn/ver/42/trunk/Main/src/org/casalib/time/Interval.as
+END
+FrameTimeStopwatch.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/villagedash/!svn/ver/42/trunk/Main/src/org/casalib/time/FrameTimeStopwatch.as
+END
+EnterFrame.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/villagedash/!svn/ver/42/trunk/Main/src/org/casalib/time/EnterFrame.as
+END
+Sequence.as
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/villagedash/!svn/ver/42/trunk/Main/src/org/casalib/time/Sequence.as
+END
+FrameDelay.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/villagedash/!svn/ver/42/trunk/Main/src/org/casalib/time/FrameDelay.as
+END
+FrameTime.as
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/villagedash/!svn/ver/42/trunk/Main/src/org/casalib/time/FrameTime.as
+END
+Stopwatch.as
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/villagedash/!svn/ver/42/trunk/Main/src/org/casalib/time/Stopwatch.as
+END

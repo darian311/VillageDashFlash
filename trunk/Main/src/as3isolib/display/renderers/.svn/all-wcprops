@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/display/renderers
+END
+ISceneRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/display/renderers/ISceneRenderer.as
+END
+DefaultShadowRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/display/renderers/DefaultShadowRenderer.as
+END
+SceneBlittingRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/display/renderers/SceneBlittingRenderer.as
+END
+DefaultViewRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/display/renderers/DefaultViewRenderer.as
+END
+DefaultSceneLayoutRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/display/renderers/DefaultSceneLayoutRenderer.as
+END
+IViewRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/display/renderers/IViewRenderer.as
+END
+ISceneLayoutRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/display/renderers/ISceneLayoutRenderer.as
+END
+SimpleSceneLayoutRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/display/renderers/SimpleSceneLayoutRenderer.as
+END
+ViewBoundsRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/display/renderers/ViewBoundsRenderer.as
+END

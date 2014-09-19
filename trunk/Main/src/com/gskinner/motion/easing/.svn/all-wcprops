@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing
+END
+Quadratic.as
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing/Quadratic.as
+END
+Sine.as
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing/Sine.as
+END
+Back.as
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing/Back.as
+END
+Circular.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing/Circular.as
+END
+Elastic.as
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing/Elastic.as
+END
+Cubic.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing/Cubic.as
+END
+Exponential.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing/Exponential.as
+END
+Quartic.as
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing/Quartic.as
+END
+Linear.as
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing/Linear.as
+END
+Bounce.as
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing/Bounce.as
+END
+Quintic.as
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/easing/Quintic.as
+END

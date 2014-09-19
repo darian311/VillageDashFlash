@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<ListDetails label="SWC Loading Details" projectName="OpenSpace Example 1 -SFS2X-">
+
+
+<LoadedSetList label="LoadedSet List">
+
+
+<LoadingSet label="LoadingSet1:">
+
+
+<item  label="CollapseCanvas2.swc-1444642743" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/CollapseCanvas2.swc-1444642743/library.swf"/>
+
+
+<item  label="DisplayObjectWrapper.swc-737585039" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/DisplayObjectWrapper.swc-737585039/library.swf"/>
+
+
+<item  label="MemoryGauge.swc359664801" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/MemoryGauge.swc359664801/library.swf"/>
+
+
+<item  label="OpenSpace_Flex_2X.swc2142741545" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/OpenSpace_Flex_2X.swc2142741545/library.swf"/>
+
+
+<item  label="SFS2X_API_AS3.swc-357175815" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/SFS2X_API_AS3.swc-357175815/library.swf"/>
+
+
+<item  label="SmartFoxBits2X_BasePack.swc785604761" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/SmartFoxBits2X_BasePack.swc785604761/library.swf"/>
+
+
+</LoadingSet>
+
+
+<LoadingSet label="LoadingSet2:">
+
+
+<item  label="DisplayObjectWrapper.swc-737585039" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/DisplayObjectWrapper.swc-737585039/library.swf"/>
+
+
+<item  label="MemoryGauge.swc359664801" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/MemoryGauge.swc359664801/library.swf"/>
+
+
+<item  label="OpenSpace_Flex_2X.swc2142741545" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/OpenSpace_Flex_2X.swc2142741545/library.swf"/>
+
+
+<item  label="SFS2X_API_AS3.swc-357175815" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/SFS2X_API_AS3.swc-357175815/library.swf"/>
+
+
+<item  label="SmartFoxBits2X_BasePack.swc785604761" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/SmartFoxBits2X_BasePack.swc785604761/library.swf"/>
+
+
+</LoadingSet>
+
+
+<LoadingSet label="LoadingSet3:">
+
+
+<item  label="DisplayObjectWrapper.swc-737585039" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/DisplayObjectWrapper.swc-737585039/library.swf"/>
+
+
+<item  label="MemoryGauge.swc359664801" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/MemoryGauge.swc359664801/library.swf"/>
+
+
+<item  label="SFS2X_API_AS3.swc-357175815" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/SFS2X_API_AS3.swc-357175815/library.swf"/>
+
+
+<item  label="SmartFoxBits2X_BasePack.swc785604761" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/SmartFoxBits2X_BasePack.swc785604761/library.swf"/>
+
+
+</LoadingSet>
+
+
+<LoadingSet label="LoadingSet4:">
+
+
+<item  label="DisplayObjectWrapper.swc-737585039" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/DisplayObjectWrapper.swc-737585039/library.swf"/>
+
+
+<item  label="MemoryGauge.swc359664801" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/MemoryGauge.swc359664801/library.swf"/>
+
+
+<item  label="SFS2X_API_AS3.swc-357175815" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/SFS2X_API_AS3.swc-357175815/library.swf"/>
+
+
+</LoadingSet>
+
+
+</LoadedSetList>
+
+
+<RemovedSetList label="RemovedSet List">
+
+
+<RemovedSet label="RemovedSet1:">
+
+
+<item  label="No Item present in this set"/>
+
+
+</RemovedSet>
+
+
+<RemovedSet label="RemovedSet2:">
+
+
+<item  label="CollapseCanvas2.swc-1444642743" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/CollapseCanvas2.swc-1444642743/library.swf"/>
+
+
+</RemovedSet>
+
+
+<RemovedSet label="RemovedSet3:">
+
+
+<item  label="CollapseCanvas2.swc-1444642743" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/CollapseCanvas2.swc-1444642743/library.swf"/>
+
+
+<item  label="OpenSpace_Flex_2X.swc2142741545" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/OpenSpace_Flex_2X.swc2142741545/library.swf"/>
+
+
+</RemovedSet>
+
+
+<RemovedSet label="RemovedSet4:">
+
+
+<item  label="CollapseCanvas2.swc-1444642743" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/CollapseCanvas2.swc-1444642743/library.swf"/>
+
+
+<item  label="OpenSpace_Flex_2X.swc2142741545" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/OpenSpace_Flex_2X.swc2142741545/library.swf"/>
+
+
+<item  label="SmartFoxBits2X_BasePack.swc785604761" path="/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/trunk/.metadata/.plugins/com.adobe.flexbuilder.codemodel/SwcCache/SmartFoxBits2X_BasePack.swc785604761/library.swf"/>
+
+
+</RemovedSet>
+
+
+</RemovedSetList>
+
+
+</ListDetails>
+
+

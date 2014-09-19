@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/bounds
+END
+IBounds.as
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/bounds/IBounds.as
+END
+PrimitiveBounds.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/bounds/PrimitiveBounds.as
+END
+SceneBounds.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/bounds/SceneBounds.as
+END

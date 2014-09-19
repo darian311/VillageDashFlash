@@ -1,0 +1,70 @@
+10
+
+dir
+42
+https://darhic@labs.villagethegame.com/villagedash/trunk/Main/src/org/casalib
+https://darhic@labs.villagethegame.com/villagedash
+
+
+
+2012-09-22T23:45:15.234685Z
+42
+darhic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+03104305-5c64-430c-910b-4504875d8791
+
+load
+dir
+
+control
+dir
+
+events
+dir
+
+display
+dir
+
+core
+dir
+
+math
+dir
+
+collection
+dir
+
+errors
+dir
+
+layout
+dir
+
+transitions
+dir
+
+ui
+dir
+
+util
+dir
+
+process
+dir
+
+time
+dir
+

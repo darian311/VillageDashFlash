@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/villagedash/!svn/ver/42/trunk/Main/src/masputih/patterns/mvc/model
+END
+Model.as
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/villagedash/!svn/ver/42/trunk/Main/src/masputih/patterns/mvc/model/Model.as
+END
+ModelEvent.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/villagedash/!svn/ver/42/trunk/Main/src/masputih/patterns/mvc/model/ModelEvent.as
+END
+ModelLocator.as
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/villagedash/!svn/ver/42/trunk/Main/src/masputih/patterns/mvc/model/ModelLocator.as
+END
+UserData.as
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/villagedash/!svn/ver/42/trunk/Main/src/masputih/patterns/mvc/model/UserData.as
+END

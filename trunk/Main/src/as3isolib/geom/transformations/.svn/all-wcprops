@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/geom/transformations
+END
+IsometricTransformation.as
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/geom/transformations/IsometricTransformation.as
+END
+DimetricTransformation.as
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/geom/transformations/DimetricTransformation.as
+END
+IAxonometricTransformation.as
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/geom/transformations/IAxonometricTransformation.as
+END
+DefaultIsometricTransformation.as
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/villagedash/!svn/ver/42/trunk/Main/src/as3isolib/geom/transformations/DefaultIsometricTransformation.as
+END

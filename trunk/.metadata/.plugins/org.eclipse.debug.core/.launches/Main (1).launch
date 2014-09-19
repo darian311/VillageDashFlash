@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.adobe.flexbuilder.debug.launchConfigurationType.flash">
+<stringAttribute key="com.adobe.flexbuilder.debug.ATTR_APPLICATION" value="src/Main.mxml"/>
+<stringAttribute key="com.adobe.flexbuilder.debug.ATTR_PROJECT" value="OpenSpace Example 1 -SFS2X-"/>
+<stringAttribute key="com.adobe.flexbuilder.debug.ATTR_RUN_URL" value="file:/Users/darianhickman/Dropbox/Village/other/svn_villagethegame.org/branches/darian_branch/OpenSpace%20Example%201%20-SFS2X-/bin-debug/Main.html"/>
+<booleanAttribute key="com.adobe.flexbuilder.debug.ATTR_USE_DEFAULT_URLS" value="true"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/OpenSpace Example 1 -SFS2X-"/>
+<listEntry value="/OpenSpace Example 1 -SFS2X-/src/Main.mxml"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+<listEntry value="1"/>
+</listAttribute>
+</launchConfiguration>

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins
+END
+SnappingPlugin.as
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins/SnappingPlugin.as
+END
+AutoHidePlugin.as
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins/AutoHidePlugin.as
+END
+IGTweenPlugin.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins/IGTweenPlugin.as
+END
+BlurPlugin.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins/BlurPlugin.as
+END
+MatrixPlugin.as
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins/MatrixPlugin.as
+END
+SoundTransformPlugin.as
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins/SoundTransformPlugin.as
+END
+SmartRotationPlugin.as
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins/SmartRotationPlugin.as
+END
+ColorAdjustPlugin.as
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins/ColorAdjustPlugin.as
+END
+ColorTransformPlugin.as
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins/ColorTransformPlugin.as
+END
+MotionBlurPlugin.as
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins/MotionBlurPlugin.as
+END
+CurrentFramePlugin.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/villagedash/!svn/ver/42/trunk/Main/src/com/gskinner/motion/plugins/CurrentFramePlugin.as
+END
